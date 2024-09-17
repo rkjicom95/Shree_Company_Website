@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Layout from "../../components/layout/Layout";
 import { Link } from "react-router-dom";
@@ -11,10 +11,15 @@ import Web from "../../assets/Web.png";
 import Social from "../../assets/social-media.png";
 import App from "../../assets/app.png";
 import Software from "../../assets/software.png";
+import Team from "../../assets/team.webp";
 import { GoGift } from "react-icons/go";
 import { TiDocumentText } from "react-icons/ti";
 import { FaRegFileCode } from "react-icons/fa6";
 import { CiDeliveryTruck } from "react-icons/ci";
+import System from "../../assets/system.webp";
+import MobileP from "../../assets/mobilephone.png";
+import { IoCallOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
@@ -23,6 +28,7 @@ const services = [
     title: "Paid Marketing",
     description:
       "Elevate your brand's online visibility with customized performance marketing tactics designed to attract, engage, and convert your ideal customers.",
+    link: "/paidMarketing",
   },
   {
     id: 2,
@@ -30,6 +36,7 @@ const services = [
     title: "Software Development",
     description:
       "Creating custom software solutions that streamline your operations, and support your business growth.",
+    link: "/softwareDevelopment", // Add a link if required
   },
   {
     id: 3,
@@ -37,6 +44,7 @@ const services = [
     title: "Website Designing",
     description:
       "Crafting stunning, user-friendly websites that reflect your brand's identity, engage visitors, and drive online success.",
+    link: "/websiteDesigning",
   },
   {
     id: 4,
@@ -44,13 +52,15 @@ const services = [
     title: "Search Engine Optimization",
     description:
       "Optimizing your website to rank higher in search engines, attracting more organic traffic, and increasing your visibility to potential customers.",
+    link: "/searchEngine",
   },
   {
     id: 5,
     icon: Social,
     title: "Social Media Marketing",
     description:
-      "Engaging your audience on social media with creative content and strategic campaigns that build brand loyalty and drive conversions",
+      "Engaging your audience on social media with creative content and strategic campaigns that build brand loyalty and drive conversions.",
+    link: "/socialMedia",
   },
   {
     id: 6,
@@ -58,10 +68,19 @@ const services = [
     title: "App Development",
     description:
       "Developing intuitive, high-performing mobile apps that enhance user experiences and keep your customers connected to your brand, anywhere, anytime.",
+    link: "/appDevelopment",
   },
 ];
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <>
       <Layout>
@@ -71,10 +90,51 @@ const Home = () => {
             Growth Through Innovation <br /> Where Creativity Meets Strategy.
           </h1>
           <div>
-            <button className="home-welcome-button-one">GET STARTED</button>
+            <button className="home-welcome-button-one" onClick={togglePopup}>
+              GET STARTED
+            </button>
+            {isPopupOpen && (
+              <div className="popup-overlay">
+                <div className="popup-form">
+                  <h1>Send us a message</h1>
+                  <h2>
+                    Please feel free to send us any questions, feedback or
+                    suggestions you might have.
+                  </h2>
+                  <form>
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label htmlFor="phone">Phone Number:</label>
+                    <input type="number" id="phone" name="phone" required />
+
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label htmlFor="company">Company:</label>
+                    <input type="text" id="company" name="company" required />
+
+                    <label htmlFor="message">Message:</label>
+                    <textarea
+                      type="textarea"
+                      id="message"
+                      name="message"
+                      required
+                      className="popup-textarea"
+                    />
+                    <div className="popup-buttons">
+                      <button type="submit">Submit</button>
+                      <button className="close-popup" onClick={togglePopup}>
+                        CANCEL
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            )}
             <Link to="/about">
               <button className="home-welcome-button-two">LEARN MORE</button>
-            </Link>{" "}
+            </Link>
           </div>
           <div className="home-welcome-text">
             <h1>
@@ -134,10 +194,16 @@ const Home = () => {
           <div className="home-offer-div">
             {services.map((service) => (
               <div key={service.id}>
-                <img src={service.icon} alt="" className="home-offer-icon" />
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="home-offer-icon"
+                />
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
-                <button>LEARN MORE</button>
+                <button onClick={() => navigate(service.link)}>
+                  LEARN MORE
+                </button>
               </div>
             ))}
           </div>
@@ -189,7 +255,74 @@ const Home = () => {
               </h3>
             </div>
           </div>
-          <button className="home-works-button">CONTACT US</button>
+          <Link to="/contact">
+            <button className="home-works-button">CONTACT US</button>
+          </Link>
+        </div>
+        <div className="home-needs">
+          <img src={Team} alt="" />
+          <div className="home-need">
+            <h1>
+              Innovative solutions, exceptional quality, tailored to your needs
+            </h1>
+            <p>
+              Providing cutting-edge solutions and unmatched quality, customized
+              to perfectly align with your specific business requirements and
+              goals
+            </p>
+            <Link to="/contact">
+              <button>CONTACT US</button>
+            </Link>
+          </div>
+        </div>
+        <div className="home-data-all">
+          <h1>
+            Exploring Digital Excellence with <br /> Ajavu Tech House
+          </h1>
+
+          <div className="home-data-three">
+            <div className="home-data-two">
+              <div className="home-data-system">
+                <div>
+                  <h1>Timely and Transparent Communication</h1>
+                  <h4>
+                    Ensuring reliable and transparent <br /> communication
+                    throughout your project
+                  </h4>
+                </div>
+                <div>
+                  <img src={System} alt="" />
+                </div>
+              </div>
+              <div className="home-data-system">
+                <div>
+                  <h1>Responsive and Scalable Solutions</h1>
+                  <h4>
+                    Delivering responsive and scalable <br /> solutions that
+                    grow with your <br /> business and adapt to your needs
+                  </h4>
+                </div>
+                <div>
+                  <img src={MobileP} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="home-data-mobile">
+              <IoCallOutline className="home-data-icon" />
+              <h1>Premium Support</h1>
+              <h2>
+                Reach us at +91 8077044335 <br />
+                for expert assistance and unparalleled <br /> service, available{" "}
+                around the <br />
+                clock.
+              </h2>
+              <button
+                onClick={() => (window.location.href = "tel:+918077044335")}
+              >
+                CALL NOW
+              </button>
+            </div>
+          </div>
         </div>
       </Layout>
     </>

@@ -1,0 +1,186 @@
+.paid-marketing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 140px;
+  background: #000036;
+  background-image: url("../../assets/bghome.webp"); /* Replace with the actual path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  gap: 30px;
+}
+.paid-marketing-one h2 {
+  color: #fa7315;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.paid-marketing-one h1 {
+  font-size: 35px;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.paid-marketing-one p {
+  color: #c5c5f6;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.paid-marketing-one button {
+  background-color: #f3501c;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #fff;
+}
+
+.paid-marketing-one button:hover {
+  background-color: #d9441b;
+}
+/* 2nd........  */
+.paid-marketing-section {
+  padding: 50px;
+  background: #000036;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+}
+.paid-marketing-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.paid-marketing-sec-one {
+  width: 70%;
+}
+.paid-marketing-sec-one h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.paid-marketing-sec-one p {
+  color: #c5c5f6;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.paid-marketing-left-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.paid-marketing-left {
+  color: #f3501c;
+  font-size: 20px;
+}
+.paid-marketing-left-icon h4 {
+  color: #c5c5f6;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0px;
+}
+.paid-marketing-right {
+  color: #c5c5f6;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #0b0b67;
+  width: 25%;
+  border-radius: 5px;
+  padding: 10px;
+}
+.paid-marketing-right h1 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.paid-marketing-call {
+  background-color: #f3501c;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #fff;
+  margin-top: 15px;
+
+  width: 100%;
+}
+
+.paid-marketing-call:hover {
+  background-color: #d9441b;
+}
+.paid-marketing img {
+  width: 400px;
+  height: 400px;
+}
+@media (max-width: 480px) {
+  .paid-marketing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 30px;
+  }
+  .paid-marketing-one h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px;
+  }
+  .paid-marketing-one h1 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .paid-marketing-one p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  .paid-marketing img {
+    display: none;
+  }
+  .paid-marketing-one button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #fff;
+  }
+  .paid-marketing-section {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .paid-marketing-sec-one {
+    width: 100%;
+  }
+  .paid-marketing-right {
+    width: 100%;
+    padding: 10px;
+    margin-top: 1rem;
+  }
+}
