@@ -1,0 +1,149 @@
+/* Main Register Container */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ensure horizontal scroll is disabled */
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box; /* Include padding/border in element size */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #655ee5;
+  padding: 20px;
+  margin: 0;
+  overflow: hidden; /* Ensure no vertical or horizontal scroll */
+  overflow-x: hidden;
+}
+
+/* Register Form Box */
+.register-form {
+  background-color: #151251;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px; /* Set max-width to avoid horizontal scrolling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Form Heading */
+.register-form h1 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Labels */
+.register-form label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Form Input Fields */
+.register-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.register-form input:focus {
+  border-color: #fa7315;
+}
+
+/* Submit Button */
+.register-buttons {
+  width: 100%;
+  background-color: #fa7315;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-buttons:hover {
+  background-color: #e6600d;
+}
+
+/* Login Link Section */
+.register-login {
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.register-login a {
+  color: #fa7315;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-login a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+  .register-form {
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 100%; /* Ensure form takes up full width on smaller screens */
+  }
+
+  .register-form h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .register-form label {
+    font-size: 12px;
+  }
+
+  .register-form input {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .register-buttons {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .register-login {
+    font-size: 12px;
+  }
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 768px) {
+  .register-form {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .register-form h1 {
+    font-size: 24px;
+  }
+}

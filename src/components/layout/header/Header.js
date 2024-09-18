@@ -35,6 +35,9 @@ const Header = () => {
           <Link to="/about">
             <h1>About</h1>
           </Link>
+          <Link to="/register">
+            <h1>Register/Login</h1>
+          </Link>
         </div>
       </div>
 

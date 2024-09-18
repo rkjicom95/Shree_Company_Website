@@ -4,6 +4,7 @@
   padding: 20px 0px;
   background-color: #f9f9f9;
   background: #000036;
+  position: relative;
 }
 
 .home-welcome h2 {
@@ -485,14 +486,14 @@
   display: flex;
   flex-direction: column;
 }
-.home-data-icon {
+.home-data-icon-right {
   color: #f3501c;
   background: #fff;
-  font-size: 38px;
+  font-size: 68px;
   padding: 14px;
   border-radius: 35px;
 }
-.home-data-icon:hover {
+.home-data-icon-right:hover {
   color: #fff;
   background: #f3501c;
 }
@@ -529,6 +530,7 @@
   width: 100%;
   position: absolute;
   left: 27%;
+  top: 12%;
   background-color: #151251;
   text-align: left;
 }
@@ -945,8 +947,8 @@
   .home-data-mobile {
     width: 100%;
   }
-  .home-data-icon {
-    font-size: 34px;
+  .home-data-icon-right {
+    font-size: 54px;
     padding: 12px;
     border-radius: 32px;
   }
@@ -969,5 +971,69 @@
     background-color: #f3501c;
     margin: 20px;
     margin-top: 0px;
+  }
+  /* Popup Form */
+  .popup-form {
+    padding: 15px;
+    max-width: 320px;
+    width: 100%;
+    position: absolute;
+    left: 10%;
+    top: 12%;
+  }
+
+  .popup-form h1 {
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px;
+  }
+  .popup-form h2 {
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    padding: 0px;
+  }
+
+  .popup-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0.2rem;
+  }
+  .popup-form label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .popup-form input {
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .popup-textarea {
+    /* padding: 2.5rem; */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 50px;
+  }
+
+  .popup-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 15px;
+    gap: 10px; /* Space between the buttons */
+  }
+
+  .popup-buttons button {
+    padding: 8px 14px;
+    font-size: 14px;
+
+    font-weight: bold;
   }
 }

@@ -11,6 +11,10 @@ import SearchEngine from "./pages/search_engine /SearchEngine";
 import SocialMedia from "./pages/social_media/SocialMedia";
 import AppDevelopment from "./pages/app_development/AppDevelopment";
 import UiDesign from "./pages/ui_design/UiDesign";
+import Register from "./auth_Page/register/Register";
+import Login from "./auth_Page/login/Login";
+import Otp from "./auth_Page/otp/Otp";
+import ResatPassword from "./auth_Page/resatPassword/ResatPassword";
 
 const App = () => {
   return (
@@ -31,6 +35,10 @@ const App = () => {
           <Route path="/socialMedia" element={<SocialMedia />} />
           <Route path="/appDevelopment" element={<AppDevelopment />} />
           <Route path="/uiDesign" element={<UiDesign />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/otp" element={<Otp />} />
+          <Route path="/resetPassword" element={<ResatPassword />} />
         </Routes>
       </Router>
     </>

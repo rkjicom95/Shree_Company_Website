@@ -308,7 +308,7 @@ const Home = () => {
               </div>
             </div>
             <div className="home-data-mobile">
-              <IoCallOutline className="home-data-icon" />
+              <IoCallOutline className="home-data-icon-right" />
               <h1>Premium Support</h1>
               <h2>
                 Reach us at +91 8077044335 <br />
